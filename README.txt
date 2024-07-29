@@ -2,19 +2,6 @@
 
 This is a simple web application for managing a library's book inventory. The application allows users to add, view, update, and delete books from the inventory. The backend is developed using Java, Spring Boot, and Hibernate, with data stored in a MySQL database. The application exposes RESTful APIs for performing CRUD operations on the book inventory.
 
-## Table of Contents
-
-- [Features](#features)
-- [Data Requirements](#data-requirements)
-- [API Endpoints](#api-endpoints)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Application](#running-the-application)
-- [Database Setup](#database-setup)
-- [Docker Deployment](#docker-deployment)
-- [Technologies Used](#technologies-used)
-- [License](#license)
 
 ## Features
 
