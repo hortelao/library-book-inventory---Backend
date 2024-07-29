@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_container
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: books
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+    ports:
+      - "3306:3306"
+    networks:
+      - my-network
+    volumes:
+      - db_data:/var/lib/mysql
+
+  app:
+    image: book
+    container_name: spring_app_container
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/books
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD:
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  db_data:
