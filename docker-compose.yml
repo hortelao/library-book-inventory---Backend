@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   db:
@@ -18,7 +18,7 @@ services:
       - db_data:/var/lib/mysql
 
   app:
-    image: book
+    build: ./backend
     container_name: spring_app_container
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/books
