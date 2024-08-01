@@ -1,3 +1,4 @@
+.DS_Store
 HELP.md
 target/
 !backend/.mvn/wrapper/maven-wrapper.jar
@@ -14,7 +15,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-backend/.idea
+.idea
 *.iws
 *.iml
 *.ipr
