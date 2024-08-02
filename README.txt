@@ -39,10 +39,9 @@ The application manages books with the following data:
 ### Installation
 
 1. Clone the repository:
-    ```sh
     git clone https://github.com/yourusername/library-management-system.git
     cd library-management-system
-    ```
+
 
 2. Update MySQL configuration in `src/main/resources/application.properties`:
     ```properties
@@ -102,45 +101,6 @@ The application manages books with the following data:
     ('Crime and Punishment', 'Fyodor Dostoevsky', '9780486415871', '1866-01-01', 9.99, 0);
     ```
 
-## Docker Deployment
-
-1. Create a `Dockerfile` in the root directory:
-    ```dockerfile
-    FROM openjdk:11-jre-slim
-    VOLUME /tmp
-    COPY target/library-management-system-0.0.1-SNAPSHOT.jar app.jar
-    ENTRYPOINT ["java","-jar","/app.jar"]
-    ```
-
-2. Create a `docker-compose.yml` file:
-    ```yaml
-    version: '3.8'
-    services:
-      mysql:
-        image: mysql:8.0
-        environment:
-          MYSQL_ROOT_PASSWORD: yourpassword
-          MYSQL_DATABASE: library_db
-        ports:
-          - "3306:3306"
-      app:
-        build: .
-        ports:
-          - "8080:8080"
-        environment:
-          SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/library_db
-          SPRING_DATASOURCE_USERNAME: root
-          SPRING_DATASOURCE_PASSWORD: yourpassword
-        depends_on:
-          - mysql
-    ```
-
-3. Build and run the containers:
-    ```sh
-    docker-compose up --build
-    ```
-
-4. The application will be accessible at `http://localhost:8080`.
 
 ## Technologies Used
 
