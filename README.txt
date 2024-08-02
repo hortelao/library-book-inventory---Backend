@@ -108,7 +108,6 @@ The application manages books with the following data:
 - Spring Boot
 - Hibernate
 - MySQL
-- Docker
 
 ## License
 
