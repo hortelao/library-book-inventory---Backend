@@ -39,8 +39,8 @@ The application manages books with the following data:
 ### Installation
 
 1. Clone the repository:
-    git clone https://github.com/yourusername/library-management-system.git
-    cd library-management-system
+    git clone https://github.com/hortelao/library-book-inventory---Backend.git
+    cd library-book-inventory---Backend
 
 
 2. Update MySQL configuration in `src/main/resources/application.properties`:
