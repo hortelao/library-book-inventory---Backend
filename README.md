@@ -109,6 +109,5 @@ The application manages books with the following data:
 - Hibernate
 - MySQL
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## Contact
+For any issues or questions, please contact [andrefhortelao@gmail.com].
